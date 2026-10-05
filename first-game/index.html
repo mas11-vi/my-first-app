@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#080d1c">
-    <title>STAR BLASTER</title>
+    <meta name="theme-color" content="#100d1b">
+    <title>月影 TSUKIKAGE — 和風横スクロールシューティング</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
     <main class="game-shell">
       <header class="game-header">
-        <a class="wordmark" href="./" aria-label="STAR BLASTER ホーム">STAR<span>BLASTER</span></a>
-        <p class="game-tagline">銀河を駆け抜けろ</p>
+        <a class="wordmark" href="./" aria-label="月影 TSUKIKAGE ホーム">
+          <span class="crest" aria-hidden="true">月</span>
+          <span class="wordmark-copy"><span class="wordmark-jp">月影</span><span class="wordmark-en">TSUKIKAGE</span></span>
+        </a>
+        <p class="game-tagline"><span>SCROLL SHOOTER</span>月夜に舞う、鋼の翼</p>
       </header>
 
       <section class="game-frame" aria-label="横スクロールシューティングゲーム">
@@ -20,15 +23,16 @@
           このゲームを遊ぶにはCanvasに対応したブラウザーが必要です。
         </canvas>
         <div class="hud" aria-live="polite">
-          <div><span class="hud-label">SCORE</span><span id="score">000000</span></div>
-          <div><span class="hud-label">LIVES</span><span id="lives" class="lives">♥ ♥ ♥</span></div>
+          <div class="hud-panel"><span class="hud-label">得点 <i>SCORE</i></span><span id="score">000000</span></div>
+          <div class="hud-panel hud-right"><span class="hud-label">残機 <i>VITAL</i></span><span id="lives" class="lives">◆ ◆ ◆</span></div>
         </div>
         <div class="overlay" id="overlay">
-          <p class="eyebrow" id="overlay-eyebrow">READY, PILOT?</p>
-          <h1 id="overlay-title">STAR BLASTER</h1>
-          <p id="overlay-message">敵を撃ち落として、ハイスコアを目指そう。</p>
-          <button id="start-button" type="button">ゲームスタート</button>
-          <p class="overlay-hint">移動 <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> / <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>　射撃 <kbd>SPACE</kbd></p>
+          <p class="eyebrow" id="overlay-eyebrow">幕ノ壱　—　戦闘開始</p>
+          <h1 id="overlay-title">月影</h1>
+          <p class="overlay-subtitle">TSUKIKAGE <span>／</span> MOONLIT ASSAULT</p>
+          <p id="overlay-message">迫りくる鬼火を斬り払い、夜明けまで生き残れ。</p>
+          <button id="start-button" type="button"><span>ゲーム開始</span><b aria-hidden="true">→</b></button>
+          <p class="overlay-hint">移動 <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> / <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span class="hint-divider">・</span>射撃 <kbd>SPACE</kbd></p>
         </div>
       </section>
 
@@ -41,7 +45,7 @@
         </div>
         <button class="fire-button" type="button" data-control="fire" aria-label="射撃">FIRE</button>
       </nav>
-      <footer>WAVE 01 <span>・</span> GOOD LUCK, PILOT</footer>
+      <footer><span class="footer-stamp">月</span><span>第一夜</span><i>・</i>月影作戦記録 <span class="footer-en">TSUKIKAGE PROJECT</span></footer>
     </main>
   </body>
 </html>
